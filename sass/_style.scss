@@ -1,0 +1,1091 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+
+  @include mq(ipad){
+
+    max-width: 93.75vw;
+
+  }
+
+  @include mq(sp){
+    max-width: 100%;
+    padding: 0 2.43vw;
+    }
+}
+
+body {
+  background-color: $color2;
+  border-top: 6px solid $color3;
+  color: $color1;
+  font-weight: 400;
+  @include m-font();
+
+  @include mq(ipad){
+
+    border-top: 0.586vw solid $color3;
+
+  }
+  @include mq(sp){
+
+    border-top: 0.782vw solid $color3;
+
+  }
+
+  header {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 39px 0;
+
+      @include mq(ipad){
+
+        padding: 3.809vw 0;
+
+      }
+      @include mq(sp){
+
+        padding: 5.085vw 2.43vw;
+
+      }
+      .menu-trigger,
+      .menu-trigger span {
+        display: inline-block;
+        transition: all .4s;
+        box-sizing: border-box;
+      }
+
+      .menu-trigger {
+        position: fixed;
+        top: 2.608vw;
+        right: 2.608vw;
+        width: 3.911vw;
+        height: 3.129vw;
+        z-index: 3;
+        cursor: pointer;
+        transition: all 400ms;
+        -webkit-transition:all 400ms;
+        z-index: 9999;
+        display: none;
+        span{
+          position: absolute;
+          width: 3.911vw;
+          height: 0.522vw;
+          background: #fff;
+          border-radius: 1.304vw;
+          -webkit-transition: all 400ms;
+          transition: all 400ms;
+          &:nth-of-type(1){
+            top: 0;
+          }
+          &:nth-of-type(2){
+            top: 1.304vw;
+          }
+          &:nth-of-type(3){
+            top: 2.608vw;
+          }
+        }
+      
+        &.active {
+          transform: rotate(180deg);
+          -webkit-transform:rotate(180deg);
+          span{
+            &:nth-of-type(1){
+              transform: translate(-0.913vw, 0.491vw) rotate(45deg);
+              -webkit-transform: translate(-0.913vw, 0.491vw) rotate(45deg);
+            }
+            &:nth-of-type(2){
+              opacity: 0;
+            }
+            &:nth-of-type(3){
+              transform: translate(-0.913vw,-2.216vw) rotate(-45deg);
+              -webkit-transform: translate(-0.913vw,-2.216vw) rotate(-45deg);
+            }
+          }
+        }
+        @include mq(sp){
+          display: block;
+        }
+      }
+
+      .nav {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        width: 660px;
+        margin: 4px 0;
+        padding-left: 6px;
+
+      
+        @include mq(ipad){
+
+          width: 64.453vw;
+          margin: 0.391vw 0;
+          padding-left: 0.586vw;
+
+        }
+
+        @include mq(sp){
+
+          position: fixed;
+          width: 100%;
+          top: -0.782vw;
+          right: 100%;
+          background-color: rgba(33,33,33,.9);
+          height: 100%;
+          padding-top: 7.823vw;
+          display: block;
+          z-index: 999;
+        }
+    
+        li {
+          margin-right: 2px;
+
+          @include mq(ipad){
+
+            margin-right: 0.195vw;
+
+          }
+
+          @include mq(sp){
+
+            margin-right: 0.261vw;
+
+          }
+        
+
+          a {
+            font-size: 13px;
+            padding: 11px 18px;
+            text-transform: uppercase;
+            text-align: center;
+            border-radius: 10px;
+
+            @include mq(ipad){
+
+              font-size: 1.27vw;
+              padding: 1.074vw 1.758vw;
+              border-radius: 0.977vw;
+
+            }
+
+            @include mq(sp){
+
+              font-size: 1.695vw;
+              padding: 1.434vw 2.347vw;
+              border-radius: 1.304vw;
+
+            }
+          
+          }
+
+          &.active,
+          &:hover {
+            background-color: $color3;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .sec-cursus {
+    padding-bottom: 47px;
+
+    @include mq(ipad){
+
+      padding-bottom: 4.59vw;
+
+    }
+
+    @include mq(sp){
+
+      padding-bottom: 6.128vw;
+
+    }
+  
+
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      @include mq(sp){
+        flex-direction: column;
+        align-items: center;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 28px;
+        top: 47%;
+
+        @include mq(ipad){
+
+          width: 1.465vw;
+          height: 2.734vw;
+
+        }
+
+        @include mq(sp){
+
+          width: 1.956vw;
+          height: 3.651vw;
+
+        }
+      
+      }
+
+      &::before {
+        left: 0;
+        background: url('/images/img_left_arrow.png')no-repeat center/contain;
+        @include mq(sp){
+
+          left: 4%;
+
+        }
+      }
+
+      &::after {
+        right: 0;
+        background: url('/images/img_right_arrow.png')no-repeat center/contain;
+
+        @include mq(sp){
+
+          right: 4%;
+
+        }
+      }
+
+      .cursus-blk {
+        width: 34%;
+        padding: 92px 0;
+
+        @include mq(ipad){
+
+          padding: 8.984vw 0;
+
+        }
+
+        @include mq(sp){
+          width: 80%;
+          padding: 8.475vw 0;
+
+        }
+      
+
+        h2 {
+          font-size: 46px;
+          padding-left: 2px;
+
+          @include mq(ipad){
+
+            font-size: 4.492vw;
+            padding-left: 0.195vw;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 5.997vw;
+            padding-left: 0.261vw;
+
+          }
+        
+        }
+
+        p {
+          font-size: 12px;
+          color: $color4;
+          padding: 22px 0 16px;
+          line-height: 1.6;
+          letter-spacing: 0.5px;
+
+          @include mq(ipad){
+
+            font-size: 1.172vw;
+            padding: 2.148vw 0 1.563vw;
+            letter-spacing: 0.049vw;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 1.565vw;
+            padding: 2.868vw 0 2.086vw;
+            letter-spacing: 0.065vw;
+
+          }
+        
+        }
+        a {
+          font-size: 14px;
+          padding: 11px 10px;
+          background-color: $color3;
+          text-align: center;
+          width: 144px;
+          border-radius: 12px;
+
+          @include mq(ipad){
+
+            font-size: 1.367vw;
+            padding: 1.074vw 0.977vw;
+            width: 14.063vw;
+            border-radius: 1.172vw;
+
+          }
+          @include mq(sp){
+
+            font-size: 1.825vw;
+            padding: 1.434vw 1.304vw;
+            width: 18.774vw;
+            border-radius: 1.565vw;
+
+          }
+        
+        }
+      }
+
+      .cursus-img {
+       width: 430px;
+
+        @include mq(ipad){
+
+          width: 41.992vw;
+
+        }
+
+        @include mq(sp){
+
+          width: 56.063vw;
+
+        }
+      
+
+        span {
+          // background-color: $color6;
+          // display: block;
+          // width: 88%;
+          // text-align: center;
+          // border-radius: 50%;
+          // padding: 176px 0;
+          // font-size: 26px;
+          // margin: 0 26px;
+          
+          @include mq(ipad){
+
+            // width: 88%;
+            // border-radius: 50%;
+            // padding: 17.188vw 0;
+            // font-size: 2.539vw;
+            // margin: 0 2.539vw;
+
+          }
+
+          @include mq(sp){
+
+            // padding: 134px 0;
+            // font-size: 3.39vw;
+            // margin: 0 26px;
+            // width: 85%;
+
+          }
+        
+        }
+      }
+    }
+
+  }
+
+  .sec-service {
+    background-color: $color7;
+    padding: 84px 0 20px;
+    position: relative;
+
+    @include mq(ipad){
+
+      padding: 8.203vw 0 1.953vw;
+
+    }
+
+    @include mq(sp){
+
+      padding: 10.952vw 0 2.608vw;
+
+    }
+  
+
+    .cmn-header {
+      @include cmn-ttl();
+    }
+
+    .serviec-lists {
+      display: flex;
+      margin: 62px 0;
+      justify-content: space-between;
+
+      @include mq(ipad){
+
+        margin: 6.055vw 0;
+
+      }
+      @include mq(sp){
+        flex-wrap: wrap;
+        margin: 8.083vw 1.956vw;
+        justify-content: space-around;
+
+      }
+    
+
+      li {
+        background-color: $color1;
+        width: 225px;
+        margin: 0 auto;
+        padding: 20px 23px;
+        color: $color4;
+        text-align: center;
+        margin: 0;
+
+        @include mq(ipad){
+
+          width: 21.973vw;
+          padding: 1.953vw 2.246vw;
+
+        }
+
+        @include mq(sp){
+
+          width: 33.335vw;
+          padding: 2.608vw 2.999vw;
+          margin-bottom: 2.868vw;
+         
+        }
+      
+
+        .cmn-img {
+          padding: 52px 0;
+          background-color: $color9;
+          color: $color1;
+          margin: 0 29px;
+          letter-spacing: 1px;
+
+          @include mq(ipad){
+
+            padding: 5.078vw 0;
+            margin: 0 2.832vw;
+            letter-spacing: 0.098vw;
+
+          }
+          @include mq(sp){
+
+            padding: 6.78vw 0;
+            margin: 0 3.781vw;
+            letter-spacing: 0.13vw;
+
+          }
+        
+        }
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        .service-ttl {
+          padding: 14px 0 17px;
+          font-size: 32px;
+          color: $color8;
+
+          @include mq(ipad){
+
+            padding: 1.367vw 0 1.66vw;
+            font-size: 3.125vw;
+
+          }
+
+          @include mq(sp){
+
+            padding: 1.825vw 0 2.216vw;
+            font-size: 4.172vw;
+
+          }
+        
+        }
+
+        .service-txt {
+          font-size: 11px;
+          line-height: 1.5;
+          letter-spacing: 0.8px;
+
+          @include mq(ipad){
+
+            font-size: 1.074vw;
+            letter-spacing: 0.078vw;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 1.834vw;
+            letter-spacing: 0.104vw;
+
+          }
+        
+        }
+
+        &:hover {
+          background-color: $color3;
+          color: $color1;
+
+          .cmn-img {
+            background-color: $color1;
+            color: $color8;
+          }
+
+          .service-ttl {
+            color: $color1;
+          }
+
+        }
+      }
+
+    }
+  }
+
+  .sec-latestwork {
+    background-color: $color7;
+    padding: 0 0 83px;
+    position: relative;
+
+    @include mq(ipad){
+
+      padding: 0 0 8.105vw;
+
+    }
+
+    @include mq(sp){
+
+       padding: 0 0 10.821vw;
+
+    }
+  
+
+    .cmn-header {
+      @include cmn-ttl();
+    }
+
+    .latest-lists {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 63px;
+      position: relative;
+
+      @include mq(ipad){
+
+        margin-top: 6.152vw;
+
+      }
+      @include mq(sp){
+
+        margin-top: 8.214vw;
+        justify-content: space-around;
+
+      }
+    
+
+      li {
+        border: 5px solid $color1;
+        margin-bottom: 20px;
+        position: relative;
+        cursor: pointer;
+
+        @include mq(ipad){
+
+          border: 0.488vw solid $color1;
+          margin-bottom: 1.953vw;
+          width: 31%;
+
+        }
+        @include mq(sp){
+
+          border: 0.652vw solid $color1;
+          margin-bottom: 2.608vw;
+
+        }
+      
+
+        &::after {
+          background-color: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          content: '';
+          width: 290px;
+          height: 190px;
+          top: 0;
+          display: none;
+
+          @include mq(ipad){
+
+            width: 28.32vw;
+            height: 18.555vw;
+  
+          }
+          @include mq(sp){
+
+            width: 37.81vw;
+            height: 24.772vw;
+
+          }
+        
+        }
+
+        &:hover {
+          border: 5px solid $color3;
+
+          @include mq(ipad){
+
+            border: 0.488vw solid $color3;
+
+          }
+
+          @include mq(sp){
+
+            border: 0.652vw solid $color3;
+
+          }
+
+          &::after {
+            display: block;
+          }
+        }
+      }
+
+      .latest-img {
+        vertical-align: bottom;
+        position: relative;
+        width: 290px;
+         @include mq(ipad){
+          width: 28.32vw;
+        }
+        @include mq(sp){
+          width: 37.81vw;
+        }
+      }
+
+      .work-txt {
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 1px;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 9px 0;
+
+        @include mq(ipad){
+
+          font-size: 1.172vw;
+          letter-spacing: 0.098vw;
+          padding: 0.879vw 0;
+
+        }
+        @include mq(sp){
+          font-size: 2.565vw;
+          letter-spacing: 0.13vw;
+          padding: 1.173vw 0;
+
+        }
+      }
+    }
+  }
+
+  .sec-footer {
+
+    background-color: $color10;
+    padding: 34px 0 0;
+
+    @include mq(ipad){
+
+      padding: 3.32vw 0 0;
+
+    }
+
+    @include mq(sp){
+
+      padding: 4.433vw 0 0;
+
+    }
+  
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      line-height: 1.6;
+      padding-bottom: 32px;
+
+      @include mq(ipad){
+
+        padding-bottom: 3.125vw;
+
+      }
+
+      @include mq(sp){
+
+        padding-bottom: 4.172vw;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+      }
+    
+
+      li {
+        width: 225px;
+        font-size: 13px;
+
+        @include mq(ipad){
+
+          width: 21.973vw;
+          font-size: 1.27vw;
+
+        }
+
+        @include mq(sp){
+
+          width: 37.335vw;
+          font-size: 1.695vw;
+
+        }
+
+        .footer-header {
+          font-size: 16px;
+          color: $color1;
+          padding-bottom: 23px;
+
+          @include mq(ipad){
+
+            font-size: 1.563vw;
+            padding-bottom: 2.246vw;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 2.086vw;
+            padding-bottom: 2.999vw;
+
+          }
+        }
+
+        input {
+          display: block;
+        }
+      }
+
+      .blog {
+        color: $color4;
+        letter-spacing: 0.4px;
+
+        @include mq(ipad){
+          
+        letter-spacing: 0.039vw;
+
+        }
+
+        @include mq(sp){
+
+          letter-spacing: 0.052vw;
+
+        }
+      
+
+        .footer-subheader {
+          font-size: 16px;
+          color: $color3;
+
+          @include mq(ipad){
+
+            font-size: 1.563vw;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 2.086vw;
+
+          }
+        
+        }
+
+        .link {
+          color: $color11;
+          display: flex;
+          font-size: 11px;
+          padding: 5px 0;
+
+          @include mq(ipad){
+
+            font-size: 1.074vw;
+            padding: 0.488vw 0;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 1.434vw;
+            padding: 0.652vw 0;
+
+          }
+        
+
+          .admin {
+
+            color: $color3;
+            display: inline-block;
+
+          }
+        }
+
+        .date {
+          font-size: 11px;
+          padding: 0 0 5px;
+
+          @include mq(ipad){
+
+            font-size: 1.074vw;
+            padding: 0 0 0.488vw;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 1.434vw;
+            padding: 0 0 0.652vw;
+
+          }
+        
+        }
+
+        .read-more {
+          color: $color3;
+          font-size: 13px;
+          padding-top: 10px;
+
+          @include mq(ipad){
+
+            font-size: 1.27vw;
+            padding-top: 0.977vw;
+
+          }
+
+          @include mq(sp){
+
+            font-size: 1.695vw;
+            padding-top: 1.304vw;
+
+          }
+        
+        }
+      }
+
+      .links {
+        a {
+          color: $color3;
+          position: relative;
+          padding: 7px 9px 6px;
+          letter-spacing: 0.4px;
+
+          @include mq(ipad){
+
+            padding: 0.684vw 0.879vw 0.586vw;
+            letter-spacing: 0.039vw;
+
+          }
+
+          @include mq(sp){
+            padding: 0.913vw 1.173vw 0.782vw;
+            letter-spacing: 0.052vw;
+          }
+        
+
+          &::before {
+            background: url('/images/img_composite.png')no-repeat center/contain;
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            content: '';
+            left: 0;
+            top: 15px;
+
+            @include mq(ipad){
+
+              width: 0.488vw;
+              height: 0.488vw;
+              top: 1.465vw;
+
+            }
+
+            @include mq(sp){
+
+              width: 0.652vw;
+              height: 0.652vw;
+              top: 1.956vw;
+            }
+          
+          }
+        }
+      }
+
+      .tweets {
+        color: $color4;
+
+        .name {
+          display: inline-block;
+          color: $color3;
+        }
+
+        p {
+          padding-top: 6px;
+          padding-bottom: 15px;
+          letter-spacing: 0.5px;
+
+          @include mq(ipad){
+
+            padding-top: 0.586vw;
+            padding-bottom: 1.465vw;
+            letter-spacing: 0.049vw;
+
+          }
+
+          @include mq(sp){
+
+            padding-top: 0.782vw;
+            padding-bottom: 1.956vw;
+            letter-spacing: 0.065vw;
+          }
+        
+        }
+      }
+
+      .contact-us {
+        input,
+        textarea {
+          background-color: $color12;
+          width: 100%;
+          color: $color13;
+          padding: 10px;
+          border-radius: 10px;
+          border: none;
+          @include m-font();
+
+          @include mq(ipad){
+
+            padding: 0.977vw;
+            border-radius: 0.977vw;
+
+          }
+
+          @include mq(sp){
+      
+            padding: 1.304vw;
+            border-radius: 1.304vw;
+
+          }
+        
+
+          &:focus {
+            outline: none;
+          }
+
+          &::placeholder {
+            @include m-font();
+
+            @include mq(ipad){
+
+              font-size: 1.27vw;
+
+            }
+            @include mq(sp){
+
+              font-size: 1.695vw;
+
+            }
+          
+          }
+        }
+
+        input {
+          margin: 5px 0 9px;
+
+          @include mq(ipad){
+
+            margin: 0.488vw 0 0.879vw;
+
+          }
+          @include mq(sp){
+
+            margin: 0.652vw 0 1.173vw;
+
+          }
+        
+        }
+
+        .submit {
+          width: 75px;
+          background-color: $color3;
+          color: $color8;
+          letter-spacing: 0.5px;
+          text-transform: uppercase;
+
+          @include mq(ipad){
+
+            width: 7.324vw;
+            letter-spacing: 0.049vw;
+            font-size: 1.27vw;
+
+          }
+          @include mq(sp){
+
+            width: 9.778vw;
+            letter-spacing: 0.065vw;
+            font-size: 1.695vw;
+
+          }
+        
+        }
+      }
+    }
+
+    .copyright {
+      background-color: $color14;
+      font-size: 13px;
+      color: $color4;
+      padding: 25px 0;
+      letter-spacing: 0.4px;
+
+      @include mq(ipad){
+
+        font-size: 1.27vw;
+        padding: 2.441vw 0;
+        letter-spacing: 0.039vw;
+
+      }
+
+      @include mq(sp){
+
+        font-size: 1.695vw;
+        padding: 3.259vw 0;
+        letter-spacing: 0.052vw;
+
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+
+}
