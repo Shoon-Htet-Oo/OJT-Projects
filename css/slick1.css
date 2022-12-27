@@ -1,0 +1,188 @@
+/*Tablet
+----------------------------------------*/
+@media screen and (min-width:768px) and (max-width:1160px) {
+
+    /*slick dots (category page)
+  ----------------------------------------*/
+    .slick-dots {
+      bottom: 5.208vw;
+    }
+  
+    /*slick dots (product page)
+  ----------------------------------------*/
+    .category-mv .slick-dots {
+      bottom: 0;
+      left: 1.432vw;
+    }
+  
+    .category-mv .slick-container {
+      padding-bottom: 6.38vw;
+    }
+  
+    /*slick dots li (comm-dots)
+  ----------------------------------------*/
+    .slick-dots li {
+      width: 1.953vw;
+      height: 1.953vw;
+      margin: 0 0.651vw;
+    }
+  
+    .slick-dots li button {
+      width: 1.953vw;
+      height: 1.953vw;
+      padding: 0.651vw;
+    }
+  
+    .slick-dots li button:before {
+      width: 1.953vw;
+      height: 1.953vw;
+    }
+  
+    /*slick dots color (category page)
+  ----------------------------------------*/
+    .cproduct-slider .slick-dots li button {
+      border: 0.13vw solid #FF8800;
+    }
+  
+    /*slick dots color (product page)
+  ----------------------------------------*/
+    .category-mv .slick-dots li button {
+      border: 0.13vw solid #354E57;
+    }
+  
+    /*slick arrows (for category page)
+  ----------------------------------------*/
+    .slick-prev,
+    .slick-next {
+      width: 8.333vw;
+      height: 8.333vw;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      width: 8.333vw;
+      height: 8.333vw;
+    }
+  
+    .slick-next {
+      right: 5.208vw;
+    }
+  
+    .slick-prev {
+      left: 5.208vw;
+    }
+  
+    /*Slick arrow (for product page)
+  ----------------------------------------*/
+    .category-mv .slide-arrow {
+      top: 41.4%;
+      padding: 2.148vw;
+      border: 0.13vw solid transparent;
+      border-width: 0 0.391vw 0.391vw 0;
+    }
+  
+    .category-mv .next-arrow {
+      right: 2.344vw;
+    }
+  
+    .category-mv .prev-arrow {
+      left: 2.604vw;
+    }
+  }
+  
+  /*Mobile
+  ---------------------------------------*/
+  @media screen and (max-width:767.9px) {
+  
+    /*slick arrows (for category page)
+  ---------------------------------------*/
+    .slick-prev,
+    .slick-next {
+      top: 50%;
+      width: 10vw;
+      height: 10vw;
+    }
+  
+    .slick-next {
+      right: 3.281vw;
+    }
+  
+    .slick-prev {
+      left: 3.281vw;
+    }
+  
+    .slick-prev:before,
+    .slick-next:before {
+      width: 10vw;
+      height: 10vw;
+    }
+  
+    /*Slick arrow (for product page)
+  ----------------------------------------*/
+    .category-mv .slide-arrow {
+      top: 41.4%;
+      padding: 2.578vw;
+      border: 0.156vw solid transparent;
+      border-width: 0 0.469vw 0.469vw 0;
+    }
+  
+    .category-mv .next-arrow {
+      right: 2.656vw;
+      width: 5.625vw;
+      height: 5.625vw;
+    }
+  
+    .category-mv .prev-arrow {
+      left: 3.125vw;
+      width: 5.625vw;
+      height: 5.625vw;
+    }
+  
+    /*slick dots (category page)
+  ----------------------------------------*/
+    .slick-dots {
+      bottom: 6.094vw;
+    }
+  
+    /*slick dots (product page)
+  ----------------------------------------*/
+    .category-mv .slick-dots {
+      bottom: 0;
+      left: 1.719vw;
+    }
+  
+    .category-mv .slick-container {
+      padding-bottom: 6.25vw;
+    }
+  
+    /*slick dots li (comm-dots)
+  ----------------------------------------*/
+    .slick-dots li {
+      width: 2.344vw;
+      height: 2.344vw;
+      margin: 0 0.781vw;
+    }
+  
+    .slick-dots li button {
+      width: 2.344vw;
+      height: 2.344vw;
+      padding: 0.781vw;
+    }
+  
+    .slick-dots li button:before {
+      width: 2.344vw;
+      height: 2.344vw;
+    }
+  
+    /*slick dots color (category page)
+  ----------------------------------------*/
+    .cproduct-slider .slick-dots li button {
+      border: 0.156vw solid #FF8800;
+    }
+  
+    /*slick dots color (product page)
+  ----------------------------------------*/
+    .category-mv .slick-dots li button {
+      border: 0.156vw solid #354E57;
+    }
+  }
