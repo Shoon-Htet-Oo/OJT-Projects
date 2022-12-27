@@ -1,0 +1,86 @@
+$color1:#fff;
+$color2:#7c5959;
+$color3:#76c38f;
+$color4:#979797;
+$color5:#6b6b6b;
+$color6:#333333;
+$color7:#b27f7f;
+$color8:#000000;
+$color9:#999999;
+$color10:#444444;
+$color11:#666666;
+$color12:#222222;
+$color13:#989898;
+$color14:#2b2b2b;
+
+@font-face {
+    font-family: 'Georgia';
+    src: url('/fonts/georgia.ttf');
+}
+
+@mixin m-font() {
+    font-family: 'Georgia', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+@mixin cmn-ttl() {
+    position: relative;
+    border-bottom: 3px solid $color8;
+    @include mq(ipad){
+        border-bottom: 0.293vw solid $color8;
+    }
+    @include mq(sp){
+        border-bottom:  0.391vw solid $color8;
+    }
+
+    span {
+        font-size: 32px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        background-color: $color8;
+        width: 257px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -22px;
+        border-radius: 8px;
+        padding: 7px 0;
+
+        @include mq(ipad){
+            font-size: 3.125vw;
+            width: 25.098vw;
+            top: -2.148vw;
+            border-radius: 0.781vw;
+            padding: 0.684vw 0;
+        }
+        @include mq(sp){
+            font-size: 4.172vw;
+            width: 33.507vw;
+            top: -2.868vw;
+            border-radius: 1.043vw;
+            padding: 0.913vw 0;
+        }
+    }
+}
+
+$breakpoints : ('pc' : 'screen and (min-width : 1025px)',
+    'ipad' :'screen and (min-width : 768px) and (max-width: 1024px)',
+    'sp': 'screen and (max-width : 767.9px)'
+);
+
+@mixin mq($b: pc) {
+    @media #{map-get($breakpoints, $b)} {
+        @content;
+    }
+}
+
